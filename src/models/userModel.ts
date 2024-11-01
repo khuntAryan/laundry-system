@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
   },
   contactNumber: {
     type: String,
-    required: true,
+    default: null
   },
   hostel: {
     type: String,
@@ -33,4 +33,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-export const user = mongoose.models.User ||mongoose.model('User',userSchema)
+export const User = mongoose.models.User ||mongoose.model('User',userSchema)
